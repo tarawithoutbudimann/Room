@@ -58,8 +58,8 @@ class MainActivity : AppCompatActivity() {
                 txtDesc.setText(item.description)
                 txtDate.setText(item.date)
             }
-            listviewitem.onItemClickListener=
-                AdapterView.OnItemClickListener{adapterView, _, i, _ ->
+            listviewitem.onItemLongClickListener=
+                AdapterView.OnItemLongClickListener(){adapterView, _, i, _ ->
                     val item = adapterView.adapter.getItem(i) as Notes
                     delete(item)
                     true
