@@ -16,7 +16,7 @@ interface NoteDao {
     @Update
     fun update(note:Notes)
     @Delete
-    fun delete(note:Note)
+    fun delete(note: Notes)
     @get:Query("SELECT * from note_table ORDER BY id ASC")
-    val allNotes:LiveData<List<Note>>
+    val allNotes:LiveData<List<Notes>>
 }
